@@ -41,6 +41,7 @@
                HorizontalAlignment="Right" 
                MinWidth="80" 
                Content="Új adat"
+                    Command="{Binding DoNewsubjectCommand}"
                />
             <Button  Margin="0 10 2 2" 
                HorizontalAlignment="Right" 
@@ -51,11 +52,13 @@
                HorizontalAlignment="Right"
                MinWidth="80"
                Content="Törlés"
+                     Command="{Binding DoDeleteCommand}"
+                     CommandParameter="{Binding Selectsubject}"
                />
         </StackPanel>
-        <TextBox Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="A binding helye"></TextBox>
-        <TextBox Grid.Row="3" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="A binding helye"></TextBox>
-        <ListBox Grid.Row="8"  Grid.ColumnSpan="2" Margin="2 2 2 2">
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding Selectsubject.SubjectName}"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding Selectsubject.ShortName}"></TextBox>
+        <ListBox Grid.Row="8"  Grid.ColumnSpan="2" Margin="2 2 2 2" ItemsSource="{Binding Subjects}" SelectedItem="{Binding Selectsubject}">
         </ListBox>
     </Grid>
 </UserControl>

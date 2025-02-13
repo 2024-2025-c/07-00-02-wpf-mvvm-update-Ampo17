@@ -26,6 +26,8 @@ namespace Kreta.Desktop.Extensions
             services.AddScoped<IPublicSpaceHttpService, PublicSpaceHttpService>();
             services.AddScoped<ISchoolClassHttpService, SchoolClassHttpService>();
             services.AddScoped<ISubjectHttpService, SubjectHttpService>();
+            services.AddScoped<ITeacherHttpService, TeacherHttpService();>
+            services.AddScoped<ISubjectHttpService, SubjectHttpService>();
             services.AddScoped<ISubjectTypeHttpService, SubjectTypeHttpService>();
             services.AddScoped<ITypeOfEducationHttpService, TypleOfEducationHttpService>();
             services.AddScoped<IEducationLavelService, EducationLevelHttpService>();
